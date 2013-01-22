@@ -4,19 +4,46 @@
   <meta charset="utf-8">
   <title></title>
 
+</head>
+
+<body>
+  <div id="task_container">
+
+      <header>
+        <h1>Log de Exercícios</h1>
+      </header>
+
+        <label> Tempo</label>
+        <input type="text" id="time" placeholder="ex: 1h">
+
+        <label>Tipo</label>
+        <select id="type">
+          <option>Bicicleta</option>
+          <option>Corrida</option>
+          <option>Natação</option>
+        </select>
+
+        <label>Data</label>
+        <input type="text" id="date">
+
+        <input type="button" value="adicionar" id="add_task" />
+
+        <table id="task_table" >
+          <tr>
+            <th>Tempo</th>
+            <th>Tipo</th>
+            <th>Data</th>
+          </tr>
+        </table>
+
+  </div>
+</body>
+
   <script type="text/javascript" src="js/lib/jquery-1.9.0.min.js"></script>
   <script type="text/javascript" src="js/lib/underscore-min.js"></script>
   <script type="text/javascript" src="js/lib/backbone-min.js"></script>
   <script type="text/javascript" src="js/model/task.js"></script>
   <script type="text/javascript" src="js/model/gymclass.js"></script>
-</head>
-
-<body>
-  <div id="task_container">
-      <header>
-        <h1>Log de Exercícios</h1>
-      </header>
-  </div>
-</body>
+  <script type="text/javascript" src="js/view/taskview.js"></script>
 
 </html>
