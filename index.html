@@ -1,20 +1,20 @@
+<!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <title></title>
-
+  <link rel="stylesheet" type="text/css" href="css/task.css">
 </head>
 
 <body>
   <div id="task_container">
+        <h1 id="main_title">Log de Exercícios</h1>
 
-      <header>
-        <h1>Log de Exercícios</h1>
-      </header>
-
+      <fieldset id="box_add_task">
+        <legend>Adicionar Exercício</legend>
         <label> Tempo</label>
-        <input type="text" id="time" placeholder="ex: 1h">
+        <input type="text" id="time" placeholder="Tempo">
 
         <label>Tipo</label>
         <select id="type">
@@ -24,9 +24,10 @@
         </select>
 
         <label>Data</label>
-        <input type="text" id="date">
+        <input type="data" id="date">
 
         <input type="button" value="adicionar" id="add_task" />
+      </fieldset>
 
         <table id="task_table" >
           <tr>
@@ -35,6 +36,12 @@
             <th>Data</th>
           </tr>
         </table>
+
+        <h4 id="title_total_time">
+          Você ja fez
+          <span id="total_time"></span>
+          horas de exercícios
+        </h4>
 
   </div>
 </body>

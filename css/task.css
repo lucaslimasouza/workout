@@ -1,0 +1,44 @@
+body{
+  font-family: Helvetica,Arial,Sans-serif;
+  background-color: #f4f4f4;
+}
+
+#main_title{
+  text-align: center;
+  color:#99CFDA;
+}
+#box_add_task{
+  padding-top: 15px;
+}
+
+#task_container{
+  margin: 0 auto;
+  width: 600px;
+  min-height: 400px;
+  height: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#time{
+  width: 60px;
+}
+
+#date{
+  width: 120px;
+}
+
+#task_table{
+  margin-top: 40px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+#task_table tr:nth-child(even){
+  background-color: #99CFDA;
+}
+
+#title_total_time{
+  text-align: center;
+}
