@@ -3,10 +3,12 @@ body{
   background-color: #f4f4f4;
 }
 
+/*--------Structure ----*/
 #main_title{
   text-align: center;
   color:#99CFDA;
 }
+
 #box_add_task{
   padding-top: 15px;
 }
@@ -20,7 +22,7 @@ body{
   border: 1px solid #ccc;
   background-color: #fff;
 }
-
+/*-----Inputs------*/
 #time{
   width: 60px;
 }
@@ -29,6 +31,7 @@ body{
   width: 120px;
 }
 
+/*-------Table-------------*/
 #task_table{
   margin-top: 40px;
   width: 100%;
@@ -39,6 +42,7 @@ body{
   background-color: #99CFDA;
 }
 
+/*------Sentence to show total time of tasks---------*/
 #title_total_time{
   text-align: center;
 }

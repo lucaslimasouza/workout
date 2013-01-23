@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.10.0.custom.css">
+  <link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.10.0.custom.min.css">
   <link rel="stylesheet" type="text/css" href="css/task.css">
 </head>
 
@@ -17,14 +19,10 @@
         <input type="text" id="time" placeholder="Tempo">
 
         <label>Tipo</label>
-        <select id="type">
-          <option>Bicicleta</option>
-          <option>Corrida</option>
-          <option>Natação</option>
-        </select>
+        <select id="type"></select>
 
         <label>Data</label>
-        <input type="data" id="date">
+        <input type="text" id="date">
 
         <input type="button" value="adicionar" id="add_task" />
       </fieldset>
@@ -46,11 +44,14 @@
   </div>
 </body>
 
+
   <script type="text/javascript" src="js/lib/jquery-1.9.0.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery-ui-1.10.0.custom.min.js"></script>
   <script type="text/javascript" src="js/lib/underscore-min.js"></script>
   <script type="text/javascript" src="js/lib/backbone-min.js"></script>
   <script type="text/javascript" src="js/model/task.js"></script>
-  <script type="text/javascript" src="js/model/gymclass.js"></script>
+  <script type="text/javascript" src="js/model/type.js"></script>
   <script type="text/javascript" src="js/view/taskview.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 
 </html>

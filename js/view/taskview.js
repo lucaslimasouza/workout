@@ -5,7 +5,8 @@ TaskView = Backbone.View.extend({
     this.type = $("#type");
     this.date = $("#date");
     this.table = $("#task_table");
-    this.gymclass = new GymClass();
+    this.types = types;
+    this.gymclass = gymclass;
   },
 
   events: {
@@ -13,7 +14,9 @@ TaskView = Backbone.View.extend({
   },
 
   add: function(){
-    var task = new Task({ time: this.time.val(), type: this.type.val(), date: this.date.val() })
+    var type = new Type( { name: this.type.val()})
+    alert(this.time.val());
+    var task = new Task({ time: this.time.val(), type: type, date: this.date.val() })
     this.gymclass.add(task);
     this.table.append(this.build_line_of_table(task));
     this.print_total_time();
@@ -30,18 +33,23 @@ TaskView = Backbone.View.extend({
 
   build_line_of_table: function(task){
     var tr = "<tr><td>";
-    tr += task.get("time");
+    tr += task.get("time")+"h";
     tr += "</td><td>";
-    tr += task.get("type");
+    tr += task.get("type").get("name");
     tr += "</td><td>";
     tr += task.get("date");
     tr += "</td></tr>";
     return tr;
-  }
+  },
 
+  build_options_of_type: function(){
+    var options = ""
+    this.types.each(function(type){
+        options += "<option>" +type.get("name")+"</option>";
+    });
+    this.type.append(options);
+  }
 
 });
 
 var taskview = new TaskView({ el: $("#task_container") });
-taskview.hide_total_time();
-
