@@ -15,7 +15,6 @@ TaskView = Backbone.View.extend({
 
   add: function(){
     var type = new Type( { name: this.type.val()})
-    alert(this.time.val());
     var task = new Task({ time: this.time.val(), type: type, date: this.date.val() })
     this.gymclass.add(task);
     this.table.append(this.build_line_of_table(task));

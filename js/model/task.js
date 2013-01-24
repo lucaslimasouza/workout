@@ -1,20 +1,5 @@
 Task = Backbone.Model.extend({
 
-    initialize: function(){
-      alert("cons");
-    this.bind("error", function(model, error){
-      alert( error );
-    })
-  },
-
-    validate: function( attributes){
-    alert("validadte");
-    if(attributes.time == " " || attributes.type == " "
-      || attributes.date == " "){
-        return "Favor preencher todos os campos!"
-    }
-  }
-
 });
 
 GymClass = Backbone.Collection.extend({
